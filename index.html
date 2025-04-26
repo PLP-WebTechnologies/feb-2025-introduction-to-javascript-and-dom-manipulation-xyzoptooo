@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Interactive Todo List</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav>
+    <h1>Interactive Todo List</h1>
+  </nav>
+  <main>
+    <section class="pomodoro-timer">
+      <h2>Pomodoro Timer</h2>
+      <div id="timer-display">25:00</div>
+      <div class="timer-controls">
+        <button id="start-btn">Start</button>
+        <button id="pause-btn" disabled>Pause</button>
+        <button id="reset-btn">Reset</button>
+      </div>
+      <div id="timer-mode">Work</div>
+    </section>
+
+    <section class="todo-app">
+      <input type="text" id="todo-input" placeholder="Add a new task..." aria-label="Todo input" />
+      <button id="add-btn" aria-label="Add todo">Add</button>
+      <p id="status-message" aria-live="polite"></p>
+      <div class="filters">
+        <button id="filter-all" class="filter-btn active" aria-pressed="true">All</button>
+        <button id="filter-active" class="filter-btn" aria-pressed="false">Active</button>
+        <button id="filter-completed" class="filter-btn" aria-pressed="false">Completed</button>
+      </div>
+      <ul id="todo-list" aria-label="Todo list"></ul>
+      <button id="clear-completed" aria-label="Clear completed tasks">Clear Completed</button>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
